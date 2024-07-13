@@ -12,8 +12,8 @@ NEWS_API_KEY = ""
 TWILIO_SID = "" 
 TWILIO_AUTH_TOKEN = ""
 
-## STEP 1: Use https://www.alphavantage.co
-# When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
+# The price change threshold is set VERY low (0.2%). Modify threshold according to market indicators. 
+# When STOCK price increase/decreases by 0.2% between yesterday and the day before yesterday then print("Get News").
 stock_params = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
@@ -24,12 +24,12 @@ data = response.json()["Time Series (Daily)"]
 data_list = [value for (key, value) in data.items()]
 yesterday_data = data_list[0]
 yesterday_closing_price = yesterday_data["4. close"]
-print(yesterday_closing_price)
+print("Yesterday's close was: " + yesterday_closing_price)
 
 # Day before yesterday closing price
 day_before_yesterday_data = data_list[1]
 day_before_yesterday_closing_price = day_before_yesterday_data["4. close"]
-print(day_before_yesterday_closing_price)
+print("Day before close was:  " + day_before_yesterday_closing_price))
 
 # difference between yesterday and day before yesterday's closing price
 difference = float(yesterday_closing_price) - float(day_before_yesterday_closing_price)
@@ -43,26 +43,24 @@ else:
 diff_percent = round((difference / float(yesterday_closing_price)) * 100)
 print(diff_percent)
 
-# If diff is > 2% get the news feed
+# If diff is > 0.2% get the first 4 news pieces for the COMPANY_NAME from  https://newsapi.org
 if abs(diff_percent) > 0.2:
     news_params = {
         "apiKey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME,
     }
 
-# Instead of printing ("Get News"), actually get the first 4 news pieces for the COMPANY_NAME from  https://newsapi.org
     news_response = requests.get(NEWS_ENDPOINT, params=news_params)
     articles = news_response.json()["articles"]
     four_articles = articles[:4]
     print(four_articles)
 
 
-## STEP 3: Use https://www.twilio.com
-# Send a seperate message with the percentage change and each article's title and description to your phone number. 
+# Register with https://www.twilio.com and send a seperate message with the percentage change and each article's date, title and description to your Google Voice phone number. 
 
 formatted_articles = [f"{STOCK}: {up_down}{diff_percent}%\nHeadline: {article['title']}. \nDate: {article['publishedAt']} \nBrief: {article['description']}" for article in four_articles]
 
-#Optional: Format the SMS message like this:
+# Formated SMS message:
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 for article in formatted_articles:
     message = client.messages.create(
