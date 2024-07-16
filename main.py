@@ -17,7 +17,7 @@ TWILIO_AUTH_TOKEN = ""
 stock_params = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
-    "apikey": STOCK_API_KEY,
+    "apikey": STOCK_API_KEY, 
 }
 response = requests.get(STOCK_ENDPOINT, params=stock_params)
 data = response.json()["Time Series (Daily)"]
