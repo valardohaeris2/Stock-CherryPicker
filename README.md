@@ -8,7 +8,7 @@ Stock Price and Stock News Python App sends SMS with stock price & the most rece
 - Stock Market API key: https://www.alphavantage.co/ 
 
 
-## Useage: 
+## In Action: 
 - To authenticate, provide the following:
   * Stock API Key
   * News API Key
