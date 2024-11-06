@@ -11,7 +11,7 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 STOCK_API_KEY = ""   
 NEWS_API_KEY = "" 
 TWILIO_SID = "" 
-TWILIO_AUTH_TOKEN = ""   
+TWILIO_AUTH_TOKEN = ""    
  
 
 # The price change threshold is set VERY low (0.2%). Modify threshold according to market indicators. 
