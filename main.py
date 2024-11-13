@@ -2,7 +2,7 @@ import requests
 from twilio.rest import Client
 
 STOCK = "HCP"
-COMPANY_NAME = "HashiCorp, Inc"  
+COMPANY_NAME = "HashiCorp, Inc"   
 
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query/"     
