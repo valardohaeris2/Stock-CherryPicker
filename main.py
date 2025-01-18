@@ -12,7 +12,7 @@ STOCK_API_KEY = ""
 NEWS_API_KEY = ""   
 TWILIO_SID = "" 
 TWILIO_AUTH_TOKEN = ""    
- 
+  
 
 # The price change threshold is set VERY low (0.2%). Modify threshold according to market indicators. 
 # When STOCK price increase/decreases by 0.2% between yesterday and the day before yesterday then print("Get News").
