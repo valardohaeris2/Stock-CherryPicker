@@ -15,7 +15,7 @@ TWILIO_AUTH_TOKEN = ""
   
 
 # The price change threshold is set VERY low (0.2%). Modify threshold according to market indicators. 
-# When STOCK price increase/decreases by 0.2% between yesterday and the day before yesterday then print("Get News")
+# When STOCK price increase/decreases by 0.2% between yesterday and the day before yesterday then print("Get News").
 stock_params = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK,
