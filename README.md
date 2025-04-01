@@ -1,5 +1,5 @@
 
-# HashiCorp (HCP) Stock/RSU (or any other stock): sell, hold or buy? 
+# HashiCorp (HCP) [Now IBM] Stock/RSU (or any other stock): sell, hold or buy? 
 Stock Price and Stock News Python App sends SMS with stock price & the most recent 4 news articles for the specified company (after an explicit threshold has been met). 
 
 ## Pre-reqs:
