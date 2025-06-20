@@ -20,4 +20,4 @@ Stock Price and Stock News Python App sends SMS with stock price & the most rece
   * Enter the stock symbol and/or company name
  
 - To set thresholds:
-  * Tweek lines 39 and 49 of `main.py`
+  * Tweek lines 39 and 49 of `main.py` 
