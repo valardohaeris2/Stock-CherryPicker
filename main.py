@@ -1,5 +1,5 @@
 import requests
-from twilio.rest import Client
+from twilio.rest import Client 
 
 STOCK = "IBM"
 COMPANY_NAME = "International Business Machines, Corp"         
