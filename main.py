@@ -31,7 +31,7 @@ print("Yesterday's close was: " + yesterday_closing_price)
 # Day before yesterday closing price
 day_before_yesterday_data = data_list[1]
 day_before_yesterday_closing_price = day_before_yesterday_data["4. close"]
-print("Day before close was:  " + day_before_yesterday_closing_price))
+print("Day before close was:  " + day_before_yesterday_closing_price)
 
 # difference between yesterday and day before yesterday's closing price
 difference = float(yesterday_closing_price) - float(day_before_yesterday_closing_price)
