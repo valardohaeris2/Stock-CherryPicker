@@ -1,5 +1,5 @@
 
-# Sell, hold or buy stock? 
+# Buy, Sell or Hold stock 
 Stock Price and Stock News Python App sends SMS with stock price & the most recent 4 news articles for the specified company (after an explicit threshold has been met). 
 
 ## Pre-reqs:
@@ -21,3 +21,4 @@ Stock Price and Stock News Python App sends SMS with stock price & the most rece
  
 - To set thresholds:
   * Tweek lines 39 and 49 of `main.py` 
+
