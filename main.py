@@ -1,7 +1,7 @@
 import requests
 from twilio.rest import Client 
 
-STOCK = "IBM"
+STOCK = "SPCX"
 COMPANY_NAME = "International Business Machines, Corp"         
 
  
